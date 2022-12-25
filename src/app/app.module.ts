@@ -4,10 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IniciarSesionComponent,
+    RegistrarseComponent
   ],
   imports: [
     BrowserModule,
