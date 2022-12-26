@@ -9,8 +9,8 @@ const routes: Routes = [
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'registrarse', component: RegistrarseComponent },
 
-  { path: '**', component: ErrorNoEncontradoComponent }, //Sitio Web No Encontrado 404
   { path: '', redirectTo: 'registrarse', pathMatch: 'full' },
+  { path: '**', component: ErrorNoEncontradoComponent }, //Sitio Web No Encontrado 404
 ];
 
 @NgModule({
