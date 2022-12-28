@@ -6,8 +6,19 @@
   background: #eee;
 }
 
+input[type="email"] {
+  font-size: 14px;
+}
+
+input[type="password"] {
+  font-size: 14px;
+}
+
 @media (max-width: 576px) {
   .text-logo {
     display: none;
+  }
+  .text-inicio {
+    text-align: center;
   }
 }
