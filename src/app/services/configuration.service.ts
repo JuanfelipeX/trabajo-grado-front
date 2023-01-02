@@ -8,10 +8,8 @@ export class ConfigurationService {
   private URL_WEB: string;
   constructor() {
     /* Configuración de url del servidor Api Rest */
-    this.URL_BASE = 'http://software.presucloud.test/api/';
-    this.URL_WEB = 'http://www.presucloud.test/';
-    // this.URL_BASE = 'https://backend.ipsprogresandoensalud.com/api/auth/';
-    // this.URL_WEB = 'https://backend.ipsprogresandoensalud.com/';
+    this.URL_BASE = 'http://localhost:8080/api/';
+    this.URL_WEB = 'http://backend.libreriasweb.test/';
   }
 
   /*-----------------------------------------------------------------------------------
