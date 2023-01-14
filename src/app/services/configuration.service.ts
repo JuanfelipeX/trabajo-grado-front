@@ -12,9 +12,9 @@ export class ConfigurationService {
     this.URL_WEB = 'http://backend.libreriasweb.test/';
   }
 
-  /*-----------------------------------------------------------------------------------
-  | Función get url base. Retorna la url del servidor configurada en la variable
-  -----------------------------------------------------------------------------------*/
+  /*-------------------------------------------------------------------------------
+  | Función get url base. Retorna la url del servidor configurada en la variable  |
+  --------------------------------------------------------------------------------*/
   getUrlBase() {
     return this.URL_BASE;
   }
