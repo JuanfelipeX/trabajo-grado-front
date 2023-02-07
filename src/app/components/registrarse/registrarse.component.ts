@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrarseService } from 'src/app/services/registrarse/registrarse.service';
 
 @Component({
   selector: 'app-registrarse',
@@ -6,12 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registrarse.component.css'],
 })
 export class RegistrarseComponent implements OnInit {
-  formulario: any = {
-    correo: null,
-    contrasena: null,
-  };
+  formulario: any = {};
 
-  constructor() {}
+  constructor(private registrarseService: RegistrarseService) {}
 
   ngOnInit(): void {}
+
+  /*
+   ************************************************
+   *                  REGISTRARSE                 *
+   ************************************************
+   */
+  registrase() {
+    this.registrarseService.crearUsuarios(this.formulario).subscribe({
+      next: (data) => {},
+      error: (err) => {},
+    });
+  }
 }
