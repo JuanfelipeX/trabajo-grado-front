@@ -9,6 +9,7 @@ import { RegistrarseComponent } from './components/registrarse/registrarse.compo
 import { ErrorNoEncontradoComponent } from './components/error-no-encontrado/error-no-encontrado.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     IniciarSesionComponent,
     RegistrarseComponent,
     ErrorNoEncontradoComponent,
+    InicioComponent,
   ],
   imports: [
     BrowserModule,
