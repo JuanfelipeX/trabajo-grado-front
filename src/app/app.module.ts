@@ -10,6 +10,7 @@ import { ErrorNoEncontradoComponent } from './components/error-no-encontrado/err
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
     RegistrarseComponent,
     ErrorNoEncontradoComponent,
     InicioComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
