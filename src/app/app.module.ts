@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HeaderComponent } from './shared/header/header.component';
     ErrorNoEncontradoComponent,
     InicioComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
