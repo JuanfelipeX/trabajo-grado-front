@@ -6,6 +6,10 @@
   background: #eee;
 }
 
+input[type="text"] {
+  font-size: 14px;
+}
+
 input[type="email"] {
   font-size: 14px;
 }
