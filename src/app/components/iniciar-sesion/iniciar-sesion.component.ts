@@ -9,32 +9,34 @@ import { RegistrarseService } from 'src/app/services/registrarse/registrarse.ser
 export class IniciarSesionComponent implements OnInit {
   formulario: any = {};
 
-  formularioUserByid: any = {};
+  formularioUserByCorreo: any = [];
 
   constructor(private registrarseService: RegistrarseService) {}
 
   ngOnInit(): void {}
 
-  getUsuarioById() {
-    this.registrarseService.obtenerUsuariosId(this.formulario.id).subscribe({
-      next: (data) => {
-        this.formularioUserByid = data;
-      },
-      error: (err) => {},
-    });
+  getUsuarioByCorreo() {
+    this.registrarseService
+      .obtenerUsuariosCorreo(this.formulario.email)
+      .subscribe({
+        next: (data) => {
+          this.formularioUserByCorreo = data[0];
+        },
+        error: (err) => {},
+      });
   }
 
   iniciarSesion() {
-    this.getUsuarioById();
+    this.getUsuarioByCorreo();
 
     setTimeout(() => {
-      if (
-        this.formulario.email == this.formularioUserByid.email &&
-        this.formulario.contrasena == this.formularioUserByid.contrasena
+      if (this.formularioUserByCorreo == undefined) {
+        console.log('NO paso');
+      } else if (
+        this.formulario.email == this.formularioUserByCorreo.email &&
+        this.formulario.contrasena == this.formularioUserByCorreo.contrasena
       ) {
-        console.log('paso');
-      } else {
-        console.log('no pasa');
+        console.log('Paso');
       }
     }, 500);
   }
