@@ -29,6 +29,10 @@ export class RegistrarseService {
     return this.http.get<any>(this.URL_BASE + 'usuarios' + '/' + id);
   }
 
+  obtenerUsuariosCorreo(email: any) {
+    return this.http.get<any>(this.URL_BASE + 'usuarios/correo' + '/' + email);
+  }
+
   editarUsuarios(data: any, id: number) {
     return this.http.put(this.URL_BASE + 'usuarios' + '/' + id, data);
   }
