@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'registrarse', component: RegistrarseComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: '', redirectTo: 'registrarse', pathMatch: 'full' },
+  { path: '', redirectTo: 'iniciar-sesion', pathMatch: 'full' },
   { path: '**', component: ErrorNoEncontradoComponent }, //Sitio Web No Encontrado 404
 ];
 
