@@ -37,6 +37,14 @@ export class IniciarSesionComponent implements OnInit {
         this.formulario.contrasena == this.formularioUserByCorreo.contrasena
       ) {
         console.log('Paso');
+        localStorage.setItem(
+          'contrasena',
+          this.formularioUserByCorreo.contrasena
+        );
+      } else if (
+        this.formulario.contrasena != this.formularioUserByCorreo.contrasena
+      ) {
+        console.log('Contrasena incorrecta');
       }
     }, 500);
   }
