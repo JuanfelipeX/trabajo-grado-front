@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RegistrarseService } from 'src/app/services/registrarse/registrarse.service';
 
 @Component({
@@ -11,7 +12,10 @@ export class IniciarSesionComponent implements OnInit {
 
   formularioUserByCorreo: any = [];
 
-  constructor(private registrarseService: RegistrarseService) {}
+  constructor(
+    private registrarseService: RegistrarseService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
@@ -41,6 +45,9 @@ export class IniciarSesionComponent implements OnInit {
           'contrasena',
           this.formularioUserByCorreo.contrasena
         );
+        setTimeout(() => {
+          this.router.navigateByUrl('inicio');
+        }, 500);
       } else if (
         this.formulario.contrasena != this.formularioUserByCorreo.contrasena
       ) {
