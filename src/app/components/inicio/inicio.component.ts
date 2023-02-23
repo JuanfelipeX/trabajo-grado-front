@@ -8,15 +8,8 @@ import { Router } from '@angular/router';
 })
 export class InicioComponent implements OnInit {
   constructor(private router: Router) {
-    this.verifyLooged();
   }
 
   ngOnInit(): void {}
 
-  verifyLooged() {
-    if (localStorage.getItem('contrasena')) {
-    } else {
-      this.router.navigateByUrl('iniciar-sesion');
-    }
-  }
 }
