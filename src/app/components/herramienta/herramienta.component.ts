@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HerramientasService } from 'src/app/services/herramientas/herramientas.service';
 
 @Component({
@@ -9,7 +10,12 @@ import { HerramientasService } from 'src/app/services/herramientas/herramientas.
 export class HerramientaComponent implements OnInit {
   formulario: any = {};
 
-  constructor(private HerramientaService: HerramientasService) {}
+  constructor(
+    private HerramientaService: HerramientasService,
+    private router: Router
+  ) {
+    this.verifyLooged();
+  }
 
   ngOnInit(): void {}
 
@@ -23,5 +29,12 @@ export class HerramientaComponent implements OnInit {
       next: (data) => {},
       error: (err) => {},
     });
+  }
+
+  verifyLooged() {
+    if (localStorage.getItem('contrasena')) {
+    } else {
+      this.router.navigateByUrl('iniciar-sesion');
+    }
   }
 }
