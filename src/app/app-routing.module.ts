@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'registrarse', component: RegistrarseComponent },
   { path: 'inicio', component: InicioComponent },
   { path: 'herramienta', component: HerramientaComponent },
-  { path: '', redirectTo: 'iniciar-sesion', pathMatch: 'full' },
+  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: '**', component: ErrorNoEncontradoComponent }, //Sitio Web No Encontrado 404
 ];
 
