@@ -21,10 +21,10 @@ export class HerramientaComponent implements OnInit {
 
   /*
    ************************************************
-   *                  REGISTRARSE                 *
+   *              REGISTRAR HERRAMIENTA           *
    ************************************************
    */
-  registrase() {
+  registrarHerramientas() {
     this.HerramientaService.crearHerramienta(this.formulario).subscribe({
       next: (data) => {},
       error: (err) => {},
