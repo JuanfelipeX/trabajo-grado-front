@@ -1,20 +1,47 @@
 <app-header></app-header>
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <main class="px-3">
-        <h1>Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the
-            text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-        </p>
-    </main>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" *ngFor="let element of listaHerrmientas">
+    <div class="card m-2">
+        <div class="">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="row size">
+                        <div class="col-11">
+                            <h4 class="card-title text-center">{{element.nombre}}</h4>
+                        </div>
+                        <div class="col-1">
+                            <button><i class="fa-solid fa-trash"></i></button>
+                            <button><i class="fa-solid fa-pen-to-square"></i></button>
+                        </div>
+                        <h6 class="card-text text-black-50 justify-content-center">{{element.descripcion}}</h6>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-    <footer class="mt-auto text-white-50">
-        <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a
-                href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-    </footer>
-</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="row size">
+                    <div class="col-6">
+                        Proveedor • {{element.provedor}}
+                    </div>
+                    <div class="col-6">
+                        Precio • {{element.precio}}
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div>Normas de uso</div>
+                <h6 class="card-text text-black-50 justify-content-center">{{element.normas}}</h6>
+            </li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">{{element.url}}</a>
+        </div>
+    </div>
+</div> 
+
+
 
 
 <app-footer></app-footer>

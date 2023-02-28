@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HerramientasService } from 'src/app/services/herramientas/herramientas.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-  constructor(private router: Router) {
+  //lista de herramientas
+  listaHerrmientas: any = {};
+
+  constructor(
+    private HerramientaService: HerramientasService,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.getHerramientas();
   }
 
-  ngOnInit(): void {}
-
+  /*
+   ************************************************
+   *              TRAER HERRAMIENTAS              *
+   ************************************************
+   */
+  getHerramientas() {
+    this.HerramientaService.obtenerHerramientas().subscribe({
+      next: (data) => {
+        this.listaHerrmientas = data;
+        console.log(data);
+      },
+      error: (err) => {},
+    });
+  }
 }
