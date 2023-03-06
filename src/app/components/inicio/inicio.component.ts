@@ -11,13 +11,25 @@ export class InicioComponent implements OnInit {
   //lista de herramientas
   listaHerrmientas: any = {};
 
+  // Verificar Logeo
+  verificadorBool: boolean = false;
+
   constructor(
     private HerramientaService: HerramientasService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.verifyLooged();
     this.getHerramientas();
+  }
+
+  verifyLooged() {
+    if (localStorage.getItem('contrasena')) {
+      this.verificadorBool = true;
+    } else {
+      this.verificadorBool = false;
+    }
   }
 
   /*
