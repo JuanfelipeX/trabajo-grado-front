@@ -13,6 +13,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HerramientaComponent } from './components/herramienta/herramienta.component';
+import { HerramientaActualizarComponent } from './components/herramienta-actualizar/herramienta-actualizar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HerramientaComponent } from './components/herramienta/herramienta.compo
     HeaderComponent,
     FooterComponent,
     HerramientaComponent,
+    HerramientaActualizarComponent,
   ],
   imports: [
     BrowserModule,
