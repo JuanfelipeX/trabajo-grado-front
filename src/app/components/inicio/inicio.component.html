@@ -1,52 +1,39 @@
 <app-header></app-header>
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" *ngFor="let element of listaHerrmientas">
-    <div class="card m-2">
-        <div class="">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <div class="row size">
-                        <div class="col-11">
-                            <h4 class="card-title text-center">{{element.nombre}}</h4>
-                        </div>
-                        <div class="col-1">
-                            <a *ngIf="verificadorBool"
-                                [href]="'http://localhost:4200/herramienta-actualizar/' + element.id">
-                                <button><i class="fa-solid fa-pen-to-square"></i></button>
-                            </a>
-                            <a *ngIf="verificadorBool" href="">
-                                <button><i class="fa-solid fa-trash"></i></button>
-                            </a>
-
-                        </div>
-                        <h6 class="card-text text-black-50 justify-content-center">{{element.descripcion}}</h6>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <div class="row size">
-                    <div class="col-6">
-                        Proveedor • {{element.provedor}}
-                    </div>
-                    <div class="col-6">
-                        Precio • {{element.precio}}
-                    </div>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="row">
+        <div class="col-4" *ngFor="let element of listaHerrmientas">
+            <div class="card m-2">
+                <div class="">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row size">
+                                <div class="col-11">
+                                    <h4 class="card-title text-center">{{element.nombre}}</h4>
+                                </div>
+                                <div class="col-1">
+                                    <a *ngIf="verificadorBool"
+                                        [href]="'http://localhost:4200/herramienta-actualizar/' + element.id">
+                                        <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                    </a>
+                                    <a *ngIf="verificadorBool" href="">
+                                        <button><i class="fa-solid fa-trash"></i></button>
+                                    </a>
+                                </div>
+                                <h6 class="card-text text-black-50 justify-content-center">{{element.descripcion}}</h6>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </li>
-            <li class="list-group-item">
-                <div>Normas de uso</div>
-                <h6 class="card-text text-black-50 justify-content-center">{{element.normas}}</h6>
-            </li>
-        </ul>
-        <div class="card-body w-100 h-100 p-3 mx-auto">
-            <a [href]="element.url" class="card-link">{{element.url}}</a>
+                <div class="d-flex justify-content-center mx-4 mb-4">
+                    <a [href]="'http://localhost:4200/herramienta-detalles/' + element.id">
+                        <button type="button" class="btn btn-primary btn-sm">Ver mas</button>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 
 
 
