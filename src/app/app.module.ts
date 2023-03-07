@@ -14,6 +14,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HerramientaComponent } from './components/herramienta/herramienta.component';
 import { HerramientaActualizarComponent } from './components/herramienta-actualizar/herramienta-actualizar.component';
+import { HerramientaDetallesComponent } from './components/herramienta-detalles/herramienta-detalles.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HerramientaActualizarComponent } from './components/herramienta-actuali
     FooterComponent,
     HerramientaComponent,
     HerramientaActualizarComponent,
+    HerramientaDetallesComponent,
   ],
   imports: [
     BrowserModule,
