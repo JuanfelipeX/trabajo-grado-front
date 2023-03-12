@@ -55,7 +55,9 @@ export class HerramientaActualizarComponent implements OnInit {
       this.formulario,
       this.post_id
     ).subscribe({
-      next: (data) => {},
+      next: (data) => {
+        this.router.navigateByUrl('inicio');
+      },
       error: (err) => {},
     });
   }
