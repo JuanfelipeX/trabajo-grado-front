@@ -41,7 +41,15 @@ export class InicioComponent implements OnInit {
     this.HerramientaService.obtenerHerramientas().subscribe({
       next: (data) => {
         this.listaHerrmientas = data;
-        console.log(data);
+      },
+      error: (err) => {},
+    });
+  }
+
+  borrarHerramienta(id: any) {
+    this.HerramientaService.eliminarHerramienta(id).subscribe({
+      next: (data) => {
+        window.location.reload();
       },
       error: (err) => {},
     });

@@ -38,7 +38,6 @@ export class HerramientaDetallesComponent implements OnInit {
     this.HerramientaService.obtenerHerramientaId(this.post_id).subscribe({
       next: (data) => {
         this.formulario = data;
-        console.log(this.formulario);
       },
       error: (err) => {},
     });
