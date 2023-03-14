@@ -4,7 +4,7 @@
             <div class="row justify-content-center">
                 <!-- Logo imagen registrase -->
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                    <img src={{formulario.imagen}} class="img-fluid"
+                    <img src={{formulario.imagen}} style="width: 800px; height: 500px; object-fit: cover;" class="img-fluid"
                         alt="Imagen obtenida de la herramienta de accesibilidad y usabilidad web">
 
                 </div>
@@ -18,18 +18,16 @@
                         <!-- Input Nombre -->
                         <div class="d-flex flex-row align-items-center mb-4">
                             <div class="form-outline flex-fill mb-0">
-                                <label class="form-label">Nombre de la Herramienta</label>
-                                <input type="text" id="input-nombre" class="form-control"
-                                    [(ngModel)]="formulario.nombre" name="nombre" required disabled />
+                                <label class="form-label fw-bold">Nombre de la Herramienta</label>
+                                    <p  type="text" id="input-nombre" >{{formulario.nombre}}</p>
                             </div>
                         </div>
 
                         <!-- Input Descripción -->
                         <div class="d-flex flex-row align-items-center mb-4">
                             <div class="form-outline flex-fill mb-0">
-                                <label class="form-label">Descripción de la Herramienta</label>
-                                <textarea type="text" id="input-descripcion" name="descripcion" class="form-control"
-                                    [(ngModel)]="formulario.descripcion" cols="30" rows="5" disabled></textarea>
+                                <label class="form-label fw-bold">Descripción de la Herramienta</label>
+                                <p  type="text" id="input-descripcion" >{{formulario.descripcion}}</p>
                             </div>
                         </div>
 
@@ -38,21 +36,17 @@
                                 <!-- Input Url -->
                                 <div class="d-flex flex-row align-items-center mb-2">
                                     <div class="form-outline flex-fill mb-0">
-                                        <label class="form-label">URL</label>
-                                        <input type="text" id="input-url"
-                                            class="block w-full py-1 sm:text-sm form-control"
-                                            [(ngModel)]="formulario.url" name="url" required disabled />
+                                        <label class="form-label fw-bold">URL</label>
+                                            <p  type="text" id="input-url" >{{formulario.url}}</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6 mb-2">
                                 <!-- Input Precio -->
-                                <label class="form-label">Precio</label>
+                                <label class="form-label fw-bold">Precio</label>
                                 <div class="d-flex flex-row align-items-center mb-2">
                                     <div class="form-outline flex-fill mb-0">
-                                        <input type="text" id="input-precio"
-                                            class="block w-full py-1 sm:text-sm form-control"
-                                            [(ngModel)]="formulario.precio" name="url" required disabled />
+                                        <p  type="text" id="input-precio" >{{formulario.precio}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -71,18 +65,16 @@
                         <!-- Input Proveedor -->
                         <div class="d-flex flex-row align-items-center mb-4">
                             <div class="form-outline flex-fill mb-0">
-                                <label class="form-label">Proveedor</label>
-                                <input type="text" id="input-provedor" class="form-control"
-                                    [(ngModel)]="formulario.provedor" name="provedor" required disabled />
+                                <label class="form-label fw-bold">Proveedor</label>
+                                    <p  type="text" id="input-provedor" >{{formulario.provedor}}</p>
                             </div>
                         </div>
 
                         <!-- Input Normas -->
                         <div class="d-flex flex-row align-items-center mb-4">
                             <div class="form-outline flex-fill mb-0">
-                                <label class="form-label">Normas</label>
-                                <textarea type="text" id="input-normas" name="normas" class="form-control"
-                                    [(ngModel)]="formulario.normas" cols="30" rows="5" disabled></textarea>
+                                <label class="form-label fw-bold">Normas</label>
+                                    <p  type="text" id="input-normas" >{{formulario.normas}}</p>
                             </div>
                         </div>
                     </form>
