@@ -14,10 +14,10 @@
                                 <div class="col-1">
                                     <a *ngIf="verificadorBool"
                                         [href]="'http://localhost:4200/herramienta-actualizar/' + element.id">
-                                        <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                        <i class="fa-regular fa-pen-to-square" style="color: #000;"></i>
                                     </a>
                                     <a *ngIf="verificadorBool" (click)="borrarHerramienta(element.id)">
-                                        <button><i class="fa-solid fa-trash"></i></button>
+                                       <i class="fa-solid fa-trash"></i>
                                     </a>
                                 </div>
                                 <h6 class="card-text text-black-50 justify-content-center">{{element.descripcion}}</h6>
