@@ -12,3 +12,11 @@
      -moz-user-select: none;
       -ms-user-select: none;
 }
+
+#buttonRegistrarse:hover a {
+  /* cursor: default; */
+  color: white;
+  line-height: normal;
+  overflow: visible;
+
+}
