@@ -16,10 +16,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <form class="form-inline my-2 my-lg-0">
+                    <form class="form-inline my-2 my-lg-0" >
                         <div class="input-group mt-4">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"
-                                style="width: 600px;">
+                            <input #inputSearch class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"
+                                style="width: 600px;" (keyup)="onSearch(inputSearch.value)">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
                         </div>
                     </form>

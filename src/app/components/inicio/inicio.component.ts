@@ -14,10 +14,13 @@ export class InicioComponent implements OnInit {
   // Verificar Logeo
   verificadorBool: boolean = false;
 
+  // variable para almacenar la consulta de búsqueda
+  query: string = '';
+
   constructor(
     private HerramientaService: HerramientasService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.verifyLooged();
@@ -40,9 +43,16 @@ export class InicioComponent implements OnInit {
   getHerramientas() {
     this.HerramientaService.obtenerHerramientas().subscribe({
       next: (data) => {
-        this.listaHerrmientas = data;
+        if (this.query) {
+          // filtra los elementos de la lista según la consulta de búsqueda
+          this.listaHerrmientas = data.filter((element: any) =>
+            element.nombre.toLowerCase().includes(this.query.toLowerCase())
+          );
+        } else {
+          this.listaHerrmientas = data;
+        }
       },
-      error: (err) => {},
+      error: (err) => { },
     });
   }
 
@@ -51,7 +61,22 @@ export class InicioComponent implements OnInit {
       next: (data) => {
         window.location.reload();
       },
-      error: (err) => {},
+      error: (err) => { },
     });
+  }
+
+  /*
+  ************************************************
+  *                    BUSQUEDA                  *
+  ************************************************
+  */
+  onSearch(value: string) {
+    if (value && value.length > 3) {
+      this.query = value; // actualiza la variable de consulta
+      this.getHerramientas(); // filtra la lista de herramientas
+    } else {
+      this.query = '';
+      this.getHerramientas();
+    }
   }
 }
